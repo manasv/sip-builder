@@ -1,4 +1,4 @@
-name: Merge
+name: Build
 on:
    workflow_dispatch:
     paths: 
@@ -10,4 +10,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build PJSIP
         run: |
+          chmod +x build-pjsip.sh
           build-pjsip.sh
