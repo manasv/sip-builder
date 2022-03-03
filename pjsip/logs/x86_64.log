@@ -1,0 +1,159 @@
+configure-iphone: IPHONESDK is not specified, choosing iPhoneSimulator14.4.sdk
+configure-iphone: CC is not specified, choosing /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+configure-iphone: CXX is not specified, using /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+configure-iphone: calling ./aconfigure with env vars:
+ MIN_IOS = -miphoneos-version-min=10.0
+ CC = /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+ CXX = /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+ SDKPATH = /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk
+ CFLAGS = -O2 -m32 -mios-simulator-version-min=10.0 -fembed-bitcode -I/Users/runner/work/sip-builder/sip-builder/pjsip/external/ssl/include -miphoneos-version-min=10.0 -DPJ_SDK_NAME="\"iPhoneSimulator14.4.sdk\"" -arch x86_64 -isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk
+ LDFLAGS = -O2 -m32 -mios-simulator-version-min=10.0 -Wl,-no_compact_unwind -L/Users/runner/work/sip-builder/sip-builder/pjsip/external/ssl/lib -lstdc++ -miphoneos-version-min=10.0 -arch x86_64 -isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk -framework AudioToolbox -framework Foundation
+ AR = /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -o
+ RANLIB = echo ranlib
+ ARCH = x86_64
+checking build system type... x86_64-apple-darwin19.6.0
+checking host system type... x86_64-apple-darwin_ios
+checking target system type... x86_64-apple-darwin_ios
+checking for x86_64-apple-darwin_ios-gcc... /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+checking whether the C compiler works... no
+aconfigure: error: in `/Users/runner/work/sip-builder/sip-builder/pjsip/src':
+aconfigure: error: C compiler cannot create executables
+See `config.log' for more details
+for dir in pjlib/build pjlib-util/build pjnath/build third_party/build pjmedia/build pjsip/build pjsip-apps/build ; do \
+		if /Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make  -C $dir dep; then \
+		    true; \
+		else \
+		    exit 1; \
+		fi; \
+	done
+for dir in pjlib/build pjlib-util/build pjnath/build third_party/build pjmedia/build pjsip/build pjsip-apps/build ; do \
+		if /Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make  -C $dir clean; then \
+		    true; \
+		else \
+		    exit 1; \
+		fi; \
+	done
+for dir in pjlib/build pjlib-util/build pjnath/build third_party/build pjmedia/build pjsip/build pjsip-apps/build ; do \
+		if /Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make  -C $dir all; then \
+		    true; \
+		else \
+		    exit 1; \
+		fi; \
+	done
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJLIB app=pjlib ../lib/libpj-arm64-apple-darwin_ios.a
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJLIB app=pjlib depend
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJLIB app=pjlib clean
+.pjlib-arm64-apple-darwin_ios.depend:3154: *** missing separator.  Stop.
+make[1]: *** [libpj-arm64-apple-darwin_ios.a] Error 2
+make: *** [all] Error 1
+.pjlib-arm64-apple-darwin_ios.depend:3154: *** missing separator.  Stop.
+make[1]: *** [depend] Error 2
+make: *** [dep] Error 1
+rm -rf output/pjlib-arm64-apple-darwin_ios/*
+rm -rf output/pjlib-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=TEST app=pjlib-test clean
+rm -rf output/pjlib-test-arm64-apple-darwin_ios/*
+rm -rf output/pjlib-test-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJLIB_UTIL app=pjlib-util clean
+rm -rf output/pjlib-util-arm64-apple-darwin_ios/*
+rm -rf output/pjlib-util-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=UTIL_TEST app=pjlib-util-test clean
+rm -rf output/pjlib-util-test-arm64-apple-darwin_ios/*
+rm -rf output/pjlib-util-test-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJNATH app=pjnath clean
+rm -rf output/pjnath-arm64-apple-darwin_ios/*
+rm -rf output/pjnath-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJNATH_TEST app=pjnath-test clean
+rm -rf output/pjnath-test-arm64-apple-darwin_ios/*
+rm -rf output/pjnath-test-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJTURN_CLIENT app=pjturn-client clean
+rm -rf output/pjturn-client-arm64-apple-darwin_ios/*
+rm -rf output/pjturn-client-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJTURN_SRV app=pjturn-srv clean
+rm -rf output/pjturn-srv-arm64-apple-darwin_ios/*
+rm -rf output/pjturn-srv-arm64-apple-darwin_ios
+for dir in  gsm ilbc speex g7221 srtp resample yuv webrtc; do \
+		if /Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make  -C $dir clean; then \
+		    true; \
+		else \
+		    exit 1; \
+		fi; \
+	done
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=GSM_CODEC app=libgsmcodec clean
+rm -rf output/libgsmcodec-arm64-apple-darwin_ios/*
+rm -rf output/libgsmcodec-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=ILBC app=libilbccodec clean
+rm -rf output/libilbccodec-arm64-apple-darwin_ios/*
+rm -rf output/libilbccodec-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=SPEEX app=libspeex clean
+rm -rf output/libspeex-arm64-apple-darwin_ios/*
+rm -rf output/libspeex-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=G7221_CODEC app=libg7221codec clean
+rm -rf output/libg7221codec-arm64-apple-darwin_ios/*
+rm -rf output/libg7221codec-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=SRTP app=libsrtp clean
+rm -rf output/libsrtp-arm64-apple-darwin_ios/*
+rm -rf output/libsrtp-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=RESAMPLE app=libresample clean
+rm -rf output/libresample-arm64-apple-darwin_ios/*
+rm -rf output/libresample-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=YUV app=libyuv clean
+rm -rf output/libyuv-arm64-apple-darwin_ios/*
+rm -rf output/libyuv-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=WEBRTC app=libwebrtc clean
+rm -rf output/libwebrtc-arm64-apple-darwin_ios/*
+rm -rf output/libwebrtc-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJMEDIA app=pjmedia clean
+rm -rf output/pjmedia-arm64-apple-darwin_ios/*
+rm -rf output/pjmedia-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJMEDIA_CODEC app=pjmedia-codec clean
+rm -rf output/pjmedia-codec-arm64-apple-darwin_ios/*
+rm -rf output/pjmedia-codec-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJMEDIA_VIDEODEV app=pjmedia-videodev clean
+rm -rf output/pjmedia-videodev-arm64-apple-darwin_ios/*
+rm -rf output/pjmedia-videodev-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJMEDIA_AUDIODEV app=pjmedia-audiodev clean
+rm -rf output/pjmedia-audiodev-arm64-apple-darwin_ios/*
+rm -rf output/pjmedia-audiodev-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJSDP app=pjsdp clean
+rm -rf output/pjsdp-arm64-apple-darwin_ios/*
+rm -rf output/pjsdp-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJMEDIA_TEST app=pjmedia-test clean
+rm -rf output/pjmedia-test-arm64-apple-darwin_ios/*
+rm -rf output/pjmedia-test-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJSIP app=pjsip clean
+rm -rf output/pjsip-arm64-apple-darwin_ios/*
+rm -rf output/pjsip-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJSIP_UA app=pjsip-ua clean
+rm -rf output/pjsip-ua-arm64-apple-darwin_ios/*
+rm -rf output/pjsip-ua-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJSIP_SIMPLE app=pjsip-simple clean
+rm -rf output/pjsip-simple-arm64-apple-darwin_ios/*
+rm -rf output/pjsip-simple-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJSUA_LIB app=pjsua-lib clean
+rm -rf output/pjsua-lib-arm64-apple-darwin_ios/*
+rm -rf output/pjsua-lib-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJSUA2_LIB app=pjsua2-lib clean
+rm -rf output/pjsua2-lib-arm64-apple-darwin_ios/*
+rm -rf output/pjsua2-lib-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=TEST app=pjsip-test clean
+rm -rf output/pjsip-test-arm64-apple-darwin_ios/*
+rm -rf output/pjsip-test-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJSUA2_TEST app=pjsua2-test clean
+rm -rf output/pjsua2-test-arm64-apple-darwin_ios/*
+rm -rf output/pjsua2-test-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJSUA app=pjsua clean
+rm -rf output/pjsua-arm64-apple-darwin_ios/*
+rm -rf output/pjsua-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJSYSTEST app=pjsystest clean
+rm -rf output/pjsystest-arm64-apple-darwin_ios/*
+rm -rf output/pjsystest-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f Samples.mak clean
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=SAMPLE app=sample clean
+rm -rf output/sample-arm64-apple-darwin_ios/*
+rm -rf output/sample-arm64-apple-darwin_ios
+/Applications/Xcode_12.4.app/Contents/Developer/usr/bin/make -f /Users/runner/work/sip-builder/sip-builder/pjsip/src/build/rules.mak APP=PJSUA2_SAMPLE app=pjsua2_sample clean
+rm -rf output/pjsua2_sample-arm64-apple-darwin_ios/*
+rm -rf output/pjsua2_sample-arm64-apple-darwin_ios
+rm -f  auddemo  aviplay  aectest  clidemo  confsample  encdec  httpdemo  icedemo  jbsim  latency  level  mix  pjsip-perf  pcaputil  playfile  playsine  recfile  resampleplay  simpleua  simple_pjsua  sipecho  siprtp  sipstateless  stateful_proxy  stateless_proxy  stereotest  streamutil  strerror  tonegen  vid_codec_test  vid_streamutil
+rm -rf ../bin/samples/arm64-apple-darwin_ios
