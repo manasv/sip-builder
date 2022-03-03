@@ -9,8 +9,8 @@ AVIALABLE_ARCHS=(
     "x86_64"
 )
 export BASE_DIR=`pwd -P`
-export MIN_IOS_VERSION="10.0"
-export IOS_SDK_VERSION="13.2"
+export MIN_IOS_VERSION="14.0"
+export IOS_SDK_VERSION="14.0"
 export AVIALABLE_ARCHS
 export USE_ARCHS=()
 
@@ -25,7 +25,7 @@ export HAS_BITCODE=true
 export HAS_IPV6=false
 export SHOW_HELP=false
 
-export PJSIP_VERSION="2.11.1"
+export PJSIP_VERSION="2.12"
 export PJSIP_BASE_URL="https://github.com/pjsip/pjproject/archive/refs/tags/"
 export PJSIP_DIR="$BASE_DIR/pjsip"
 export PJSIP_FINAL_LIB_DIR="$BASE_DIR/lib"
