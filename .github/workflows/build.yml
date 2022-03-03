@@ -1,0 +1,13 @@
+name: Merge
+on:
+   workflow_dispatch:
+    paths: 
+      - "build-pjsip"
+jobs:
+  build:
+    runs-on: macos-10.15
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build PJSIP
+      - run: |
+          ./build-pjsip
