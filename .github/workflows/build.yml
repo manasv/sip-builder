@@ -11,4 +11,4 @@ jobs:
       - name: Build PJSIP
         run: |
           chmod +x build-pjsip.sh
-          build-pjsip.sh
+          ./build-pjsip.sh
