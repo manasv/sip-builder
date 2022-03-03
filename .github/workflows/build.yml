@@ -2,7 +2,7 @@ name: Merge
 on:
    workflow_dispatch:
     paths: 
-      - "build-pjsip"
+      - "build-pjsip.sh"
 jobs:
   build:
     runs-on: macos-10.15
@@ -10,4 +10,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build PJSIP
       - run: |
-          ./build-pjsip
+          build-pjsip.sh
