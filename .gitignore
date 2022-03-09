@@ -31,4 +31,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Generated PJSIP
+Pod/
+VialerPJSIP.framework/
+pjsip/
+
 # End of https://www.toptal.com/developers/gitignore/api/macos
